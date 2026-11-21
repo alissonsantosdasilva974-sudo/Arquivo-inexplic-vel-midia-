@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sites para negócios locais — portfólio</title>
+<meta name="description" content="Sites de uma página para barbearias, restaurantes, clínicas e comércio local. Pronto em até 3 dias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+  :root{--fundo:#F3F5F9;--tinta:#16181D;--cinza:#5E6470;--azul:#2F5BEA;--linha:#D9DEE8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--fundo);color:var(--tinta);font:400 1.0625rem/1.6 "Bricolage Grotesque",system-ui,sans-serif}
+  :focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  header{padding:72px 0 48px}
+  h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800;line-height:1;max-width:16ch;letter-spacing:-.02em}
+  header p{max-width:52ch;color:var(--cinza);font-size:1.2rem;margin-top:20px}
+  .trabalhos{display:grid;gap:28px;padding-bottom:72px}
+  .trabalho{display:grid;grid-template-columns:1.4fr 1fr;background:#fff;border:1px solid var(--linha);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit}
+  .trabalho:hover h2{text-decoration:underline}
+  .tela{height:280px;border:0;width:100%;pointer-events:none;background:#eee}
+  .tela-wrap{overflow:hidden;border-right:1px solid var(--linha)}
+  .tela-wrap iframe{width:200%;height:560px;transform:scale(.5);transform-origin:0 0;border:0;pointer-events:none}
+  .desc{padding:28px}
+  .desc h2{font-size:1.6rem;font-weight:700}
+  .desc p{color:var(--cinza);margin-top:8px}
+  .planos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:72px}
+  .plano{background:#fff;border:1px solid var(--linha);border-radius:14px;padding:24px}
+  .plano.destaque{border:2px solid var(--azul)}
+  .plano h3{font-size:1.15rem}
+  .plano .preco{font-size:2rem;font-weight:800;margin:6px 0 12px}
+  .plano ul{padding-left:18px;color:var(--cinza)}
+  h2.secao{font-size:2rem;font-weight:800;margin-bottom:20px}
+  .contato{padding-block:56px 80px}
+  .btn{display:inline-block;background:var(--azul);color:#fff;font-weight:700;padding:16px 28px;border-radius:10px;text-decoration:none;margin-top:12px}
+  @media (max-width:820px){.trabalho,.planos{grid-template-columns:1fr}.tela-wrap{border-right:0;border-bottom:1px solid var(--linha)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Seu negócio no Google, com site próprio, em até 3 dias.</h1>
+    <p>Faço sites de uma página para negócios locais: bonitos no celular, com botão de WhatsApp, horário, endereço e cardápio ou tabela de preços. Você aprova antes de pagar.</p>
+  </header>
+
+  <section class="trabalhos" aria-label="Exemplos">
+    <a class="trabalho" href="barbearia/">
+      <div class="tela-wrap"><iframe src="barbearia/" title="Prévia do site da barbearia" loading="lazy" tabindex="-1"></iframe></div>
+      <div class="desc"><h2>Barbearia</h2><p>Tabela de preços no estilo quadro da casa e agendamento direto pelo WhatsApp.</p></div>
+    </a>
+    <a class="trabalho" href="restaurante/">
+      <div class="tela-wrap"><iframe src="restaurante/" title="Prévia do site do restaurante" loading="lazy" tabindex="-1"></iframe></div>
+      <div class="desc"><h2>Restaurante</h2><p>O prato do dia muda sozinho conforme o dia da semana, com pedido pronto no WhatsApp.</p></div>
+    </a>
+    <a class="trabalho" href="clinica/">
+      <div class="tela-wrap"><iframe src="clinica/" title="Prévia do site da clínica" loading="lazy" tabindex="-1"></iframe></div>
+      <div class="desc"><h2>Clínica odontológica</h2><p>O paciente escolhe dia e período, e a mensagem de agendamento já sai escrita.</p></div>
+    </a>
+  </section>
+
+  <h2 class="secao">Quanto custa</h2>
+  <section class="planos">
+    <div class="plano"><h3>Essencial</h3><div class="preco">R$ 397</div><ul><li>Site de uma página</li><li>Botão de WhatsApp</li><li>Endereço, mapa e horário</li><li>1 rodada de ajustes</li></ul></div>
+    <div class="plano destaque"><h3>Completo</h3><div class="preco">R$ 697</div><ul><li>Tudo do Essencial</li><li>Cardápio ou tabela de preços</li><li>Agendamento pelo WhatsApp</li><li>Cadastro no Google Meu Negócio</li><li>3 rodadas de ajustes</li></ul></div>
+    <div class="plano"><h3>Manutenção</h3><div class="preco">R$ 69/mês</div><ul><li>Troca de preços, fotos e textos</li><li>Site sempre no ar</li><li>Pedidos atendidos em até 24h</li></ul></div>
+  </section>
+
+  <section class="contato">
+    <h2 class="secao">Quer ver como fica o seu?</h2>
+    <p style="color:var(--cinza);max-width:50ch">Me mande o nome do seu negócio. Faço uma prévia grátis e você só paga se gostar.</p>
+    <a class="btn" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20ver%20uma%20pr%C3%A9via%20do%20site%20do%20meu%20neg%C3%B3cio" target="_blank" rel="noopener">Pedir minha prévia grátis</a>
+  </section>
+</div>
+</body>
+</html>

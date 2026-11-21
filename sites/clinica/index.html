@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Sorrir — odontologia</title>
+<meta name="description" content="Clínica Sorrir: limpeza, clareamento, implantes e aparelho. Agende sua avaliação pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Gelasio:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --petroleo:#0E5E63; --petroleo-2:#0A4A4E; --agua:#E4F1EF; --branco:#FFFFFF; --azul-noite:#14303A; --coral:#F07C64; --cinza:#5B6F75;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--branco);color:var(--azul-noite);font:300 1.0625rem/1.65 "Lexend",system-ui,sans-serif}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-weight:600;line-height:1.1}
+
+  header .wrap{display:flex;justify-content:space-between;align-items:center;padding:20px}
+  .marca{font-weight:600;font-size:1.2rem;text-decoration:none;color:var(--petroleo)}
+  header a.tel{text-decoration:none;color:var(--cinza)}
+
+  .hero{background:var(--agua);border-radius:28px;margin:0 20px;padding:64px 0}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(2.4rem,5.5vw,4rem);color:var(--azul-noite)}
+  .hero h1 em{font-family:"Gelasio",serif;font-weight:400}
+  .hero p{max-width:40ch;margin-top:18px;color:var(--cinza);font-size:1.15rem}
+
+  .agenda{background:var(--branco);border-radius:20px;padding:28px;box-shadow:0 18px 40px rgba(14,94,99,.14)}
+  .agenda h2{font-size:1.35rem}
+  .agenda p.ajuda{color:var(--cinza);font-size:.95rem;margin:4px 0 18px}
+  fieldset{border:0;margin-bottom:18px}
+  legend{font-weight:600;font-size:.95rem;margin-bottom:8px}
+  .opcoes{display:flex;flex-wrap:wrap;gap:8px}
+  .opcoes input{position:absolute;opacity:0;pointer-events:none}
+  .opcoes label{border:1.5px solid #BFD9D6;border-radius:10px;padding:9px 14px;cursor:pointer;font-size:.95rem;transition:background .15s,border-color .15s}
+  .opcoes input:checked+label{background:var(--petroleo);border-color:var(--petroleo);color:#fff}
+  .opcoes input:focus-visible+label{outline:3px solid var(--coral);outline-offset:2px}
+  .btn{display:block;width:100%;text-align:center;background:var(--coral);color:#3A130A;font-weight:600;padding:15px;border-radius:12px;text-decoration:none;border:0;font:inherit;font-weight:600;cursor:pointer}
+  .btn:hover{background:#F4917D}
+  .resumo{font-size:.9rem;color:var(--cinza);margin-top:10px;min-height:1.4em}
+
+  .tratamentos{padding-block:96px}
+  .tratamentos h2{font-size:2.2rem;max-width:20ch}
+  .lista{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 48px;margin-top:40px}
+  .lista h3{font-size:1.15rem;color:var(--petroleo);margin-bottom:6px}
+  .lista p{color:var(--cinza)}
+
+  .equipe{background:var(--petroleo);color:#fff;padding:80px 0}
+  .equipe .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .equipe blockquote{font-family:"Gelasio",serif;font-style:italic;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.3}
+  .equipe cite{display:block;margin-top:16px;font-style:normal;opacity:.8;font-size:1rem}
+  .equipe ul{list-style:none}
+  .equipe li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+
+  .contato{padding-block:80px;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+  .contato h3{font-size:1.1rem;margin-bottom:6px;color:var(--petroleo)}
+  footer{padding:24px 0;color:var(--cinza);font-size:.9rem;border-top:1px solid #DCE8E6}
+
+  @media (max-width:860px){
+    .hero{margin:0 12px;padding:40px 0}
+    .hero .wrap,.equipe .wrap,.lista,.contato{grid-template-columns:1fr}
+    header a.tel{display:none}
+  }
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="marca" href="#">Clínica Sorrir</a><a class="tel" href="tel:+5511999999999">(11) 99999-9999</a></div></header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Dentista sem medo, <em>com calma</em> e explicando cada passo.</h1>
+      <p>Primeira avaliação gratuita. Você sai sabendo exatamente o que precisa fazer e quanto vai custar, antes de começar qualquer tratamento.</p>
+    </div>
+    <form class="agenda" id="agenda">
+      <h2>Agende sua avaliação</h2>
+      <p class="ajuda">Escolha o dia e o período. A mensagem já vai pronta para o nosso WhatsApp.</p>
+      <fieldset><legend>Dia</legend><div class="opcoes" id="dias"></div></fieldset>
+      <fieldset><legend>Período</legend><div class="opcoes">
+        <input type="radio" name="periodo" id="p1" value="manhã (8h–12h)" checked><label for="p1">Manhã</label>
+        <input type="radio" name="periodo" id="p2" value="tarde (13h–18h)"><label for="p2">Tarde</label>
+        <input type="radio" name="periodo" id="p3" value="noite (18h–20h)"><label for="p3">Noite</label>
+      </div></fieldset>
+      <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+      <p class="resumo" id="resumo"></p>
+    </form>
+  </div>
+</section>
+
+<section class="tratamentos wrap">
+  <h2>O que fazemos por aqui</h2>
+  <div class="lista">
+    <div><h3>Limpeza e prevenção</h3><p>Remoção de tártaro e orientação de escovação. O ideal é a cada seis meses.</p></div>
+    <div><h3>Clareamento</h3><p>No consultório ou com moldeira para usar em casa, com acompanhamento.</p></div>
+    <div><h3>Aparelho ortodôntico</h3><p>Fixo ou alinhador transparente, para adolescentes e adultos.</p></div>
+    <div><h3>Implantes</h3><p>Reposição de dentes perdidos, com planejamento por tomografia.</p></div>
+    <div><h3>Canal</h3><p>Tratamento com anestesia e aparelho rotatório, em menos sessões.</p></div>
+    <div><h3>Odontopediatria</h3><p>Atendimento para crianças, sem pressa e sem susto.</p></div>
+  </div>
+</section>
+
+<section class="equipe">
+  <div class="wrap">
+    <blockquote>“Fazia oito anos que eu não ia ao dentista de tanto medo. Aqui me explicaram tudo antes e eu voltei pra terminar o tratamento.”<cite>Mariana, paciente desde 2023</cite></blockquote>
+    <ul>
+      <li>Dra. Ana Ribeiro — ortodontia (CRO 00000)</li>
+      <li>Dr. Paulo Mendes — implantes (CRO 00000)</li>
+      <li>Parcelamento em até 12 vezes</li>
+      <li>Atendemos os principais convênios</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap contato">
+  <div><h3>Endereço</h3><p>Rua Sete de Setembro, 580, sala 12<br>Sua Cidade</p></div>
+  <div><h3>Horário</h3><p>Segunda a sexta, 8h às 20h<br>Sábado, 8h às 12h</p></div>
+  <div><h3>Contato</h3><p>(11) 99999-9999<br>@clinicasorrir</p></div>
+</section>
+
+<footer><div class="wrap">Clínica Sorrir · Responsável técnico: Dra. Ana Ribeiro, CRO 00000</div></footer>
+
+<script>
+  const nomes = ["dom","seg","ter","qua","qui","sex","sáb"];
+  const dias = document.getElementById("dias");
+  let d = new Date(), n = 0, html = "";
+  while (n < 5) {
+    d.setDate(d.getDate() + 1);
+    if (d.getDay() === 0) continue;
+    const valor = `${nomes[d.getDay()]} ${d.getDate()}/${d.getMonth()+1}`;
+    html += `<input type="radio" name="dia" id="d${n}" value="${valor}" ${n===0?"checked":""}><label for="d${n}">${valor}</label>`;
+    n++;
+  }
+  dias.innerHTML = html;
+  const form = document.getElementById("agenda");
+  const resumo = document.getElementById("resumo");
+  function atualiza(){
+    const f = new FormData(form);
+    resumo.textContent = `Avaliação: ${f.get("dia")}, ${f.get("periodo")}.`;
+  }
+  form.addEventListener("change", atualiza); atualiza();
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const f = new FormData(form);
+    const msg = `Olá! Quero agendar uma avaliação na Clínica Sorrir para ${f.get("dia")}, período da ${f.get("periodo")}.`;
+    window.open("https://wa.me/5511999999999?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>

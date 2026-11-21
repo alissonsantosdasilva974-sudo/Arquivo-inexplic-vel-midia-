@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbearia do Zé — corte, barba e navalha</title>
+<meta name="description" content="Barbearia do Zé: corte, barba e navalha quente. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --garrafa:#1F3A2E; --garrafa-2:#284A3B; --latao:#C29A4B; --osso:#EFE8D8; --tinta:#1B1C18; --suave:#B9C3B5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--garrafa);color:var(--osso);font:400 1.0625rem/1.6 "Archivo",system-ui,sans-serif}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--latao);outline-offset:3px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .marca{font-family:"Alfa Slab One",serif;font-size:1.25rem;letter-spacing:.02em;text-decoration:none}
+  nav a{margin-left:22px;text-decoration:none;color:var(--suave)}
+  nav a:hover{color:var(--osso)}
+
+  .hero{padding:56px 0 80px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+  .hero h1{font-family:"Alfa Slab One",serif;font-weight:400;font-size:clamp(3rem,8vw,6.2rem);line-height:.92;color:var(--osso)}
+  .hero h1 span{display:block;color:var(--latao)}
+  .hero p{max-width:34ch;color:var(--suave);font-size:1.15rem;margin-top:22px}
+  .poste{justify-self:center;width:84px;height:300px;border-radius:42px;border:6px solid var(--latao);
+    background:repeating-linear-gradient(-45deg,#B23A2E 0 18px,var(--osso) 18px 36px,#2D4E8C 36px 54px,var(--osso) 54px 72px);
+    background-size:100% 204px;animation:gira 3.5s linear infinite}
+  @keyframes gira{to{background-position:0 204px}}
+  @media (prefers-reduced-motion:reduce){.poste{animation:none}}
+
+  .btn{display:inline-block;margin-top:30px;background:var(--latao);color:var(--tinta);font-weight:700;padding:16px 28px;border-radius:4px;text-decoration:none}
+  .btn:hover{background:#D6AE5E}
+
+  .quadro{background:var(--tinta);border:10px solid #5A3E22;border-radius:6px;padding:48px clamp(20px,5vw,64px);margin-bottom:96px;
+    box-shadow:inset 0 0 60px rgba(0,0,0,.6)}
+  .quadro h2{font-family:"Alfa Slab One",serif;font-weight:400;font-size:clamp(2rem,5vw,3rem);text-align:center;color:var(--osso)}
+  .quadro .sub{text-align:center;color:var(--suave);margin:6px 0 36px}
+  .precos{list-style:none;max-width:640px;margin:0 auto}
+  .precos li{display:flex;align-items:baseline;gap:10px;padding:12px 0;font-size:1.2rem}
+  .precos li::after{content:"";order:2;flex:1;border-bottom:2px dotted #6C6A5E;transform:translateY(-5px)}
+  .precos .item{order:1}
+  .precos .item small{display:block;font-size:.85rem;color:var(--suave)}
+  .precos .valor{order:3;font-family:"Alfa Slab One",serif;color:var(--latao)}
+
+  .sobre{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding-bottom:96px}
+  .sobre h2{font-family:"Alfa Slab One",serif;font-weight:400;font-size:2.2rem;line-height:1.05}
+  .sobre p+p{margin-top:14px}
+  .fatos{display:grid;gap:18px}
+  .fato{border-left:4px solid var(--latao);padding-left:16px}
+  .fato b{display:block;font-size:1.1rem}
+  .fato span{color:var(--suave)}
+
+  .visita{background:var(--osso);color:var(--tinta);padding:72px 0}
+  .visita .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .visita h2{font-family:"Alfa Slab One",serif;font-weight:400;font-size:2.2rem;color:var(--garrafa)}
+  .horas{list-style:none;margin-top:18px}
+  .horas li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #D3CAB4}
+  .visita .btn{background:var(--garrafa);color:var(--osso)}
+  .visita .btn:hover{background:var(--garrafa-2)}
+  footer{padding:28px 0;color:var(--suave);font-size:.9rem}
+
+  .zap{position:fixed;right:18px;bottom:18px;background:#25D366;color:#073B1E;font-weight:700;padding:14px 18px;border-radius:999px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+
+  @media (max-width:760px){
+    nav{display:none}
+    .hero,.sobre,.visita .wrap{grid-template-columns:1fr}
+    .poste{display:none}
+    .precos li{font-size:1.05rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="marca" href="#">Barbearia do Zé</a>
+    <nav><a href="#precos">Preços</a><a href="#sobre">A casa</a><a href="#visita">Como chegar</a></nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Corte na régua. <span>Barba na navalha.</span></h1>
+      <p>Desde 1998 no mesmo endereço. Chegue, sente na cadeira e saia do jeito que entrou na sua cabeça.</p>
+      <a class="btn" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20agendar%20um%20hor%C3%A1rio%20na%20Barbearia%20do%20Z%C3%A9" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    </div>
+    <div class="poste" role="img" aria-label="Poste giratório de barbearia"></div>
+  </section>
+
+  <section class="quadro" id="precos">
+    <h2>Tabela da casa</h2>
+    <p class="sub">Preços de balcão. Pix, cartão ou dinheiro.</p>
+    <ul class="precos">
+      <li><span class="item">Corte masculino<small>Máquina e tesoura, com lavagem</small></span><span class="valor">R$ 40</span></li>
+      <li><span class="item">Barba na navalha<small>Toalha quente e balm</small></span><span class="valor">R$ 35</span></li>
+      <li><span class="item">Corte + barba</span><span class="valor">R$ 65</span></li>
+      <li><span class="item">Pezinho e acabamento</span><span class="valor">R$ 15</span></li>
+      <li><span class="item">Sobrancelha na navalha</span><span class="valor">R$ 15</span></li>
+      <li><span class="item">Corte infantil<small>Até 12 anos</small></span><span class="valor">R$ 30</span></li>
+    </ul>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <h2>Barbearia de bairro, do jeito que tem que ser.</h2>
+    <div>
+      <p>Três cadeiras, café passado na hora e conversa boa. O Zé corta cabelo há mais de 25 anos e a equipe aprendeu com ele.</p>
+      <div class="fatos" style="margin-top:24px">
+        <div class="fato"><b>Hora marcada, sem fila</b><span>Agende pelo WhatsApp e seja atendido no horário.</span></div>
+        <div class="fato"><b>Navalha descartável</b><span>Lâmina nova a cada cliente.</span></div>
+        <div class="fato"><b>Estacionamento na rua</b><span>Fácil de parar, de dia e à noite.</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="visita" id="visita">
+  <div class="wrap">
+    <div>
+      <h2>Venha tomar um café com a gente</h2>
+      <p style="margin-top:14px">Rua das Palmeiras, 245 — Centro<br>Sua Cidade</p>
+      <a class="btn" href="https://maps.google.com/?q=Rua+das+Palmeiras+245" target="_blank" rel="noopener">Abrir no mapa</a>
+    </div>
+    <div>
+      <h2>Horários</h2>
+      <ul class="horas">
+        <li><span>Terça a sexta</span><span>9h às 20h</span></li>
+        <li><span>Sábado</span><span>8h às 18h</span></li>
+        <li><span>Domingo e segunda</span><span>Fechado</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Barbearia do Zé · Instagram @barbeariadoze</div></footer>
+<a class="zap" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">WhatsApp</a>
+</body>
+</html>
